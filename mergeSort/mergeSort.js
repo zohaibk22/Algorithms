@@ -11,13 +11,13 @@ const mergeSort = (array) => {
     let rightArray = array.slice(midVal, array.length);
 
     //use recursion to continue splitting the two arrays until they are split inot one
-    //console.log("split: ", leftArray, rightArray);
+    console.log("split: ", leftArray, rightArray);
     return merge(mergeSort(leftArray), mergeSort(rightArray));
   }
 };
 
 const merge = (left, right) => {
-  //create new aray
+  //create new array
   let result = new Array();
 
   //check if the left array and right array are empty
@@ -40,7 +40,7 @@ const merge = (left, right) => {
 
   //merge right array
   while (right.length) {
-    result.push(right.shift(0));
+    result.push(right.shift());
   }
 
   //return result array
